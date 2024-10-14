@@ -1,0 +1,243 @@
+nav{
+        
+        
+    position: relative;
+    width: 1000px;/*chinh sua do dai thanh bar*/
+    height: 100px;
+    transform: translate(200px,-50px);
+    background: #222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+nav a{
+    position: relative;
+    display:inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color:white;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+
+}
+nav span{
+    position: absolute;
+    left:505px;/*keo len xuong cua thanh bar*/
+    height: 78px;
+    top:0px;
+    width: 0px;
+    background:linear-gradient(50deg,blue,red);
+    border-radius: 10px;
+    z-index: 0;
+    transition:  0.5s ease-in-out
+    ;
+}
+nav a:hover~span{
+    visibility: visible;
+}
+
+    nav a:nth-child(1):hover~span{
+    left: 100px;
+    width: 150px;/*dieu chinh do rong va vi tri bao phu 1 word trong menu*/
+}
+nav a:nth-child(2):hover~span{
+    left: 250px;
+    width: 140px;
+}
+nav a:nth-child(3):hover~span{
+    left:400px;
+    width: 120px;
+
+}
+nav a:nth-child(4):hover~span{
+    left:515px;
+    width: 150px;
+
+}
+nav a:nth-child(5):hover~span{
+    left:660px;
+    width: 125px;
+
+}
+nav a:nth-child(6):hover~span{
+    left:800px;
+    width: 90px;
+
+}
+*{
+        
+    margin: 0px;   
+    padding: 0px;
+    zoom: 100%;        
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction:column;
+    display:flex;
+    max-height: 100px;
+    background:url(img/BLASH.jpg);
+    background-size:cover  ;
+
+}
+.container{
+    display:flex;
+    flex:1;
+    
+}
+header{
+    color:color-mix(in srgb-linear,purple,yellow );
+    background:linear-gradient(rgb(189, 8, 8),yellow,rgb(241, 10, 10),red) ;    
+        text-align: center;
+        border-style:auto ;
+        border-color: white;
+        border-width: 10px;
+        border-radius:10%;
+        padding: 1px;
+        height:60px;         
+        margin-bottom: 100px;
+        font-family:serif;
+        font-style: italic;
+        font-size: 50px;
+        ;
+    }
+
+
+footer{
+    background-color: black ;
+    text-align: center;
+    padding:20px;
+    color:white;
+    font-size:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font:bold;
+    gap:calc(300px);
+    border-top: 4px solid color-mix(in hsl shorter hue, yellow 40%, red 50%);
+    
+}
+footer.a{
+    position: absolute;
+    flex:1;
+    padding: 0 20px;
+    
+}
+p{
+    font-size: 10 px;
+}
+h1{
+    margin-bottom: 10px;
+}
+.content{
+    border:4px solid;
+    border-color:color-mix(in hsl shorter hue, yellow 40%, red 50%);
+    transform: translateY(-30px);
+    background-size:cover;
+    margin-left: 100px;
+    max-width: 85%;
+    color:white;
+    padding:10px;
+    overflow-y: auto;
+    height:100px;
+    font-size:auto; 
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:10px;
+    
+}
+
+img{
+    border-style:none;
+    width: 70px;
+    height: 100px;
+    display:grid;
+    z-index: 1;
+    transform: translate(500px 10px );           
+}
+.product1{
+    border-style:none;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid yellow;
+    border-radius: 10%;
+    transition: 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product1 img{
+    width: 100%;
+    height:110%;
+    
+    background-size:auto;
+}
+.product1:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(red,yellow,black,0.2);
+}
+
+.product1 a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.product1-info{
+    padding:5px;
+    background-color: black;
+    max-height: 0;
+    height:auto;
+    overflow: hidden;
+    transition: max-height 0.1s ease;
+    opacity: 0;
+    width: 100%;
+    
+}
+.product1-name{
+    font-size:13px;
+    font-weight: bold;
+    margin-bottom:0px;
+    text-align: center;
+}
+
+.product1-code{
+    font-size:10px; 
+    color:#555;
+    margin-bottom: 0px;
+    text-align: center;  
+}
+.product1-price{
+    font-size:10px;
+    color:#d9534f;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.product1-description{
+    font-size:10px;
+    color:#777;
+    text-align: center;
+
+}
+.product1:hover .product1-info{
+    max-height: 200px;
+    height: 200px;
+    opacity: 1;
+    
+}
+button{
+    text-decoration: none;
+
+}
+button:hover{
+    background-color: green;
+}
+
+
